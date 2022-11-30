@@ -37,7 +37,7 @@ public class UserController {
     @RequestMapping
     @PermissionLimit(adminuser = true)
     public String index(Model model) {
-
+        System.out.println("111");
         // 执行器列表
         List<XxlJobGroup> groupList = xxlJobGroupDao.findAll();
         model.addAttribute("groupList", groupList);
